@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license) {
-      return `https://choosealicense.com/license/${license}/`
+      return `https://choosealicense/com/license/${license}`
   } else {
       return "#";
   }
@@ -23,7 +23,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license) {
-      return `The license used for this project ${renderLicenseLink}(license)}`;
+      return `This is the license used for this project ${renderLicenseLink}(license)}`;
   } else {
       return "";
   }
@@ -31,13 +31,24 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${response.title} \n\n## Description\n ${response.description}\n\n## Installation\n ${response.installation}\n\n## Usage\n ${response.usage}\n\n## Credits\n ${response.credits}\n\n## License\n ${response.license}\n\n`;
+  return `# Project Title: ${data.title}
+${renderLicenseBadge(data.license)}
+## Table of contents
+* [Description](#description)
+* [Installation Instructions](#Installation-Instructions)
+* [Credits](#Credits)
+* [License](#License)
+## Description 
+${data.description}
+## Installation Instructions
+${data.installation}
+## Usage
+${data.usage}
+## Credits
+${data.credits}
+## License
+${data.license}
+`;
 }
 
 module.exports = generateMarkdown;
-
-// inquirer.prompt(questions).then((response) => {
-//  fs.appendFile("./utils/README.md", `# ${response.title} \n\n## Description\n ${response.description}\n\n## Installation\n ${response.installation}\n\n## Usage\n ${response.usage}\n\n## Credits\n ${response.credits}\n\n## License\n ${response.license}\n\n`, (err) =>
-//  err ? console.error(err) : console.log("Answers logged!")
-//  );
-//  });

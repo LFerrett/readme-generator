@@ -32,30 +32,32 @@ const questions = [
   },
   {
     type: "list",
-    message: "What is your preferred method of communication?",
+    message: "What license do you want to use?",
     name: "license",
-    choices: ["Apache License 2.0", "GNU General Public License v3.0", "MIT License", "BSD 2-Clause Simplified License", "BSD 3-Clause New or Revised License", "Boost Software License 1.0", "Creative Commons Zero v1.0 Universal", "Eclipse Public License 2.0", "GNU Affero General Public License 3.0", "GNU General Public License v2.0", "GNU Lesser General Public License v2.1"],
+    choices: ["Apache", "GPL-3.0", "MIT"],
   },
 ];
 
-// TODO: Create a function to write README file
-const writeToFile = data => {
-  fs.generateMarkdown('./output/README.md', data, (err) =>
-  err ? console.error(err) : console.log('Your new README.md file is ready!'));
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) =>
+      err ? console.log(err) : console.log("Your new README.md file is ready!")
+  );
 }
 
-// TODO: Create a function to initialize app
-// function init() {}
 function init() {
   inquirer
-    .prompt(questions)
-    .then((response) => {
-      console.log(response);
-      const markdown = generateMarkdown(response);
-      const fileName = `README.md`;
-      writeToFile(fileName, markdown)
-    })
- }
+      .prompt(questions)
+      .then((response) => {
+              console.log(response)
+              let README = generateMarkdown(response)
+              writeToFile("README.md", README)
+          }
 
-// Function call to initialize app
+      );
+}
+
 init();
+
+
+
+
