@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license) {
-      return `https://choosealicense.com/license/${license}`
+      return `https://choosealicense.com/license/${license}/`
   } else {
       return "#";
   }
@@ -23,7 +23,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license) {
-      return `This is the license used for this project ${renderLicenseLink}(license)}`;
+      return `The license used for this project ${renderLicenseLink}(license)}`;
   } else {
       return "";
   }
