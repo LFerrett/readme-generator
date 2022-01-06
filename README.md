@@ -1,4 +1,4 @@
-# Project Title: My Project
+# Project Title: Lauren's Professional README Generator
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/)
       
 ## Table of contents
