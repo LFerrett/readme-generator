@@ -46,6 +46,16 @@ const writeToFile = data => {
 
 // TODO: Create a function to initialize app
 // function init() {}
+function init() {
+  inquirer
+    .prompt(questions)
+    .then((response) => {
+      console.log(response);
+      const markdown = generateMarkdown(response);
+      const fileName = `README.md`;
+      writeToFile(fileName, markdown)
+    })
+ }
 
 // Function call to initialize app
 init();
