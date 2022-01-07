@@ -1,4 +1,4 @@
-# Project Title: My Awesome Cool Project
+# Project Title: My Really Cool Project
 
 [![License](https://img.shields.io/badge/License-ISC-blue.svg)]
       
@@ -11,23 +11,23 @@
 * [Questions](#questions)
 
 ## Description 
-My project is a very neat thing that I've developed with my very big brain. I was inspired to create it because of how smart I want people to think I am.
+This is a really cool project that I built using Node and Inquirer. It runs in the terminal.
 
 ## Installation
-To install the project just run it in node.
+Fork the repo and run it from the terminal.
 
 ## Usage
-You can use this project by answering prompts and then hitting enter.
+All you need to do is answer a few simple prompts and you can see the cool README it generates.
 
 ## License
 [This project is covered under the ISC License.](https://choosealicense/com/license/ISC)
 Copyright (c) 2022 Lauren Ferrett
 
 ## How to Contribute
-No one should collaborate with me because I'm too smart.
+Anyone can contribute to this project if they want.
 
 ## Tests
-Tests were run at each stage and it passed all of them.
+All the tests I ran worked!
 
 ## Questions?
 Visit my Github Repo at: https://www.github.com/LFerrett | Email me at: LFerrett@gmail.com
