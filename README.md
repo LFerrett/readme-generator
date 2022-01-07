@@ -23,7 +23,7 @@ Fork the repo or copy the code and install on your machine. Run the file in your
 
 A video walkthrough of the final project is below:
 
-![Video Walkthrough](https://drive.google.com/file/d/1tOjaVD8AnUja0MfuByMPa3mZptKy7mVA/view?usp=sharing)
+[Video Walkthrough](https://drive.google.com/file/d/1tOjaVD8AnUja0MfuByMPa3mZptKy7mVA/view?usp=sharing)
 
 ## Credits
 
