@@ -1,53 +1,60 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === "none") {
-      return ""
+    return "";
   } else {
-      return `[![License](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/)
-      `
+  if (license === "MIT") {
+    return `[![License](https://img.shields.io/badge/License-${license}-yellow.svg)]
+      `;
+  }  else {
+    return `[![License](https://img.shields.io/badge/License-${license}-blue.svg)]
+      `;
   }
 }
+}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license) {
-      return `https://choosealicense/com/license/${license}`
+    return `https://choosealicense/com/license/${license}`;
   } else {
-      return "#";
+    return "#";
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license) {
-      return `This is the license used for this project ${renderLicenseLink}(license)}`;
+    return `This is the license used for this project ${renderLicenseLink}(license)}`;
   } else {
-      return "";
+    return "";
   }
 }
 
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# Project Title: ${data.title}
 ${renderLicenseBadge(data.license)}
 ## Table of contents
 * [Description](#description)
-* [Installation Instructions](#Installation-Instructions)
-* [Credits](#Credits)
-* [License](#License)
+* [Installation Instructions](#installation)
+* [Credits](#credits)
+* [Features](#features)
+* [How to Contribute](#contribute)
+* [License](#license)
+* [Tests](#tests)
 ## Description 
 ${data.description}
 ## Installation Instructions
 ${data.installation}
 ## Usage
 ${data.usage}
+## Features
+${data.features}
+## How to Contribute
+${data.contribute}
 ## Credits
 ${data.credits}
 ## License
 ${data.license}
+## Tests
+${data.tests}
 `;
 }
 
