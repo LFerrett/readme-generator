@@ -25,9 +25,10 @@ const questions = [
     name: "usage",
   },
   {
-    type: "input",
-    message: "If your project has a lot of features, list them here.",
-    name: "features",
+    type: "list",
+    message: "What license do you want to use?",
+    name: "license",
+    choices: ["MIT", "ISC", "none"],
   },
   {
     type: "input",
@@ -37,19 +38,23 @@ const questions = [
   },
   {
     type: "input",
-    message: "List any collaborators you would like to give credit to.",
-    name: "credits",
-  },
-  {
-    type: "list",
-    message: "What license do you want to use?",
-    name: "license",
-    choices: ["MIT", "ISC", "IPL-1.0", "none"],
+    message: "Lists the tests you've created and examples on how to run them:",
+    name: "tests",
   },
   {
     type: "input",
-    message: "Lists the tests you've created and examples on how to run them:",
-    name: "tests",
+    message: "Please provide your Github Username:",
+    name: "github",
+  },
+  {
+    type: "input",
+    message: "Please enter your email address:",
+    name: "email",
+  },
+  {
+    type: "input",
+    message: "Please enter your full name:",
+    name: "name",
   },
 ];
 
